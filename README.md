@@ -5,26 +5,26 @@ This module uses two packages: requests and pandas. Right now you can call vario
 # InfoSnap.forms()
 Returns a json response of all your PS Registration Forms
 ```python
->>> from InfoSnap import InfoSnap
->>> IS = InfoSnap(api_key='your_api_key')
->>> IS.forms()
+from InfoSnap import InfoSnap
+IS = InfoSnap(api_key='your_api_key')
+IS.forms()
 ```
 # InfoSnap.import_schema
 Returns the import schema for the for identified in form_id. You can get the form ID by using InfoSnap.forms()
 ```python
->>> schema = IS.import_schema(form_id='12345', resp='json')
+schema = IS.import_schema(form_id='12345', resp='json')
 ```
 You can also return a pandas DataFrame and specify the axis 0 or 1 (default is 0):
 ```python
->>> schema = IS.import_schema(form_id='12345', resp='frame', axis=0)
+schema = IS.import_schema(form_id='12345', resp='frame', axis=0)
 ```
 # InfoSnap.submission()
 
 Returns all your submission data as a json respose
 ```python
->>> j = IS.submissions(form_id='16376', resp='json', page_size=50)
+j = IS.submissions(form_id='16376', resp='json', page_size=50)
 ```
 You can also return a pandas DataFrame:
 ```python
->>> df_submissions = IS.submissions(form_id='12345', resp='frame', page_size=50)
+df_submissions = IS.submissions(form_id='12345', resp='frame', page_size=50)
 ```
