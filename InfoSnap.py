@@ -34,6 +34,7 @@ class InfoSnap(object):
     def import_schema(self, form_id, resp='json', axis=0):
         """
         Takes a look at the import schema for a specific Form
+        
         :param form_id: the form ID
         :param resp: type of response -- if json then a json response else a Pandas data frame of the whole json
         :param axis: if 0 then return fields as rows else return fields as columns
