@@ -71,7 +71,8 @@ class InfoSnap(object):
 
     def submissions(self, form_id, resp='json', page_size=50):
         """
-
+         Looks at all the submission data for the form identified
+         
         :param form_id: the form id from infosnap
         :param resp: response type default to json but could be frame
         :param page_size: how many results to return default is 50
