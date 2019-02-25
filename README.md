@@ -4,11 +4,11 @@ This module uses two packages: requests and pandas. Right now you can call vario
 
 # InfoSnap.forms()
 Returns a json response of all your PS Registration Forms
-
+```python
 >>> from InfoSnap import InfoSnap
 >>> IS = InfoSnap(api_key='your_api_key')
 >>> IS.forms()
-
+```
 # InfoSnap.import_schema
 Returns the import schema for the for identified in form_id. You can get the form ID by using InfoSnap.forms()
 
