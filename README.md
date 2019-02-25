@@ -9,7 +9,7 @@ from InfoSnap import InfoSnap
 IS = InfoSnap(api_key='your_api_key')
 forms = IS.forms()
 ```
-# InfoSnap.import_schema
+# InfoSnap.import_schema()
 Returns the import schema for the for identified in form_id. You can get the form ID by using InfoSnap.forms()
 ```python
 schema_j = IS.import_schema(form_id='12345', resp='json')
