@@ -18,7 +18,7 @@ You can also return a pandas DataFrame and specify the axis 0 or 1 (default is 0
 ```python
 schema_df = IS.import_schema(form_id='12345', resp='frame', axis=0)
 ```
-# InfoSnap.submission()
+# InfoSnap.submissions()
 
 Returns all your submission data as a json respose
 ```python
