@@ -14,9 +14,9 @@ Returns the import schema for the for identified in form_id. You can get the for
 ```python
 schema_j = IS.import_schema(form_id='12345', resp='json')
 ```
-You can also return a pandas DataFrame and specify the axis 0 or 1 (default is 0):
+You can also return a pandas DataFrame and specify the axis 0 or 1 (default is 0). This will return a list of DataFrames as there is most likely more than one import schema:
 ```python
-schema_df = IS.import_schema(form_id='12345', resp='frame', axis=0)
+schema_dfs = IS.import_schema(form_id='12345', resp='frame', axis=0)
 ```
 # InfoSnap.submissions()
 
