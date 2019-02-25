@@ -22,7 +22,7 @@ schema_df = IS.import_schema(form_id='12345', resp='frame', axis=0)
 
 Returns all your submission data as a json respose
 ```python
-submissions_j = IS.submissions(form_id='16376', resp='json', page_size=50)
+submissions_j = IS.submissions(form_id='12345', resp='json', page_size=50)
 ```
 You can also return a pandas DataFrame:
 ```python
