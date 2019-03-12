@@ -70,17 +70,22 @@ class InfoSnap(object):
                     dfs.append(df)
                 return dfs
 
-    def submissions(self, form_id, resp='json', page_size=50):
+    def submissions(self, form_id, resp='json', page_size=50, status=None):
         """
          Looks at all the submission data for the form identified
          
         :param form_id: the form id from infosnap
         :param resp: response type default to json but could be frame
         :param page_size: how many results to return default is 50
+        :param status: the status value to filter
         :return: returns all submissions in either a json format or DataFrame
         """
-
-        url = f'http://secure.infosnap.com/api/v1/publishedactions/{form_id}/submissionrecords?pagesize={page_size}'
+        
+        if status is None:
+            url = f'http://secure.infosnap.com/api/v1/publishedactions/{form_id}/submissionrecords?pagesize={page_size}'
+        else:
+            url = f'http://secure.infosnap.com/api/v1/publishedactions/{form_id}/submissionrecords?pagesize={page_size}&status={status}'
+            
         r = requests.get(url, auth=(self.api_key, ''))
 
         if resp == 'json':
