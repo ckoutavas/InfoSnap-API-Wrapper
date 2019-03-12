@@ -77,7 +77,7 @@ class InfoSnap(object):
         :param form_id: the form id from infosnap
         :param resp: response type default to json but could be frame
         :param page_size: how many results to return default is 50
-        :param status: the status value to filter
+        :param status: the status value to filter the returned results
         :return: returns all submissions in either a json format or DataFrame
         """
         
